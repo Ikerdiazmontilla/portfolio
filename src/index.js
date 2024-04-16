@@ -5,6 +5,12 @@ import favicon from './images/favicon.ico';
 import openInNew from './images/open-in-new.svg';
 import phonePic from './images/call.png';
 import emailPic from './images/email.png';
+import battleshipImg from './images/battleship.webp';
+import funcardImg from './images/funcard.png';
+import restaurantImg from './images/restaurant.png';
+import toDoListImg from './images/to-do-list.webp';
+import weatherImg from './images/weather.webp';
+import adminImg from './images/admin-dashboard.png';
 // import projects from './images/'
 
 const link = document.createElement('link');
@@ -28,6 +34,23 @@ phoneIcon.src = phonePic;
 const emailIcon = document.querySelector('.email-icon');
 emailIcon.src = emailPic;
 
+const battleship = document.querySelector('#battleship > img');
+battleship.src = battleshipImg;
+
+const funcard = document.querySelector('#funcard > img');
+funcard.src = funcardImg;
+
+const restaurant = document.querySelector('#restaurant> img');
+restaurant.src = restaurantImg;
+
+const toDoList = document.querySelector('#to-do-list > img');
+toDoList.src = toDoListImg;
+
+const weather = document.querySelector('#weather > img');
+weather.src = weatherImg;
+
+const adminDashboard = document.querySelector('#admin-dashboard > img');
+adminDashboard.src = adminImg;
 // const projectImg = document.querySelector('.project-img');
 // projectImg.src = ;
 // externalWindow.appendChild(img);
