@@ -128,7 +128,6 @@
   flex-direction: column;
   align-items: center;
   max-width: 20vw;
-  /* background-color: aquamarine; */
   box-shadow: 4px 3px 10px darkgray;
 }
 
@@ -166,7 +165,6 @@
 footer {
   display: flex;
   padding: 5vh 5vw;
-  align-items: center;
   justify-content: center;
   gap: 10vw;
   background-color: #0891B2;
@@ -201,9 +199,98 @@ font-size: 1.3rem;
 } 
 
 
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+  }
+  
+  .projects h2{
+    grid-area: 1/1/2/3;
+  }
 
- /* .me-img {
-  aspect-ratio: initial;
-  height: 40vh;
-  width: auto;
- } */
+  .project{
+    max-width: 40vw;
+  }
+
+  footer {
+    gap: 5vw;
+  }
+  
+
+  .footer-img{
+    aspect-ratio: initial;
+    max-width: auto;
+    max-height: 28vh;
+    box-shadow: 3px 5px 10px darkgray;
+  } 
+
+  .me{
+    padding:0px 10vw;
+    flex-direction: column;
+    /* align-items: start; */
+    /* position: relative; */
+   }
+  
+  
+   .main-img p {
+    /* transform: translate(120%); */
+    font-size: 1.5rem;
+   }
+  
+   /* .about-me{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "image para"
+    "para para";
+   } */
+
+   /* .wrapper{
+    grid-area: para;
+   } */
+
+   /* .about-me p {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 70%, 50% 70%); 
+  overflow: visible;
+  } */
+
+  .main-img {
+    min-height: 16vh;
+    min-width: 16vh;
+    
+    /* align-items: flex-start;
+    justify-content: flex-end; */
+    /* transform: translate( -15%, -35% ); */
+    transform: scale(2) translate( -53%, 38% );
+    /* visibility: hidden; */
+    /* position: absolute; */
+   }
+   .about-me {
+    display: block;
+   }
+  
+   .about-me-title{
+    font-size: 2rem;
+
+   }
+
+  .about-me .shape {
+    float: left;  
+    min-width: 36vw; 
+    min-height: 18vh;
+    /* min-width: 350px; 
+    min-height: 240px;  */
+    
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  
+   .media {
+    align-self: flex-end;
+    display: flex;
+    gap: 6px;
+   }
+  
+}
