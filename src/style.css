@@ -35,7 +35,8 @@
  button, a{
   cursor: pointer;
   }
- 
+
+ /*Styling*/
  
  a{
     text-decoration: none;
@@ -46,13 +47,14 @@
  a:hover {
   transform: scale(1.2);
  }
-  
 
  body{
   display: flex;
   flex-direction: column;
   gap: 10vh;
 }
+
+/* About me section */
 
  .me{
   display: flex;
@@ -109,6 +111,8 @@
   width: 25px;
  }
 
+ /* Projects section */
+
 
 .projects {
   padding: 0px 5vw;
@@ -129,6 +133,12 @@
   align-items: center;
   max-width: 20vw;
   box-shadow: 4px 3px 10px darkgray;
+  transition: transform 0.3s;
+}
+
+.project:hover{
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .project-img{
@@ -161,6 +171,8 @@
 .project-info p {
   grid-area: 2/1/3/4;
 }
+
+/* Footer */
 
 footer {
   display: flex;
@@ -198,6 +210,8 @@ font-size: 1.3rem;
   box-shadow: 3px 5px 10px darkgray;
 } 
 
+
+/* Tablets */
 
 @media (max-width: 1024px) {
 
@@ -307,7 +321,53 @@ font-size: 1.3rem;
 }
 
 
+/* Phones */
+
 @media (max-width: 767px) {
+
+  .me{
+    padding: 5vh 5vw;
+    gap: 5vh;
+    background: linear-gradient(168deg, #0891B2 30%, white 30%);
+   }
+
+  .main-img {
+    background-image: url(./images/me-cool-light-phone.jpg);
+    width: 90vw;
+    aspect-ratio: 0.77/1;
+    transform: none;
+   }
+
+   .main-img p {
+    font-size: 2rem;
+    transform: translateY(100%);
+    color: dimgrey;
+   }
+   
+   .about-me {
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+   }
+  
+   .about-me-title{
+    font-size: 2rem;
+    align-self: center;
+   }
+
+   .about-me p {
+    text-align: center;
+   }
+
+  .about-me .shape {
+    display: none;
+  }
+
+  .media {
+    align-self: center;
+    gap: 3vw;
+    transform: scale(1.2);
+  }
 
   .projects {
     display: flex;
@@ -339,48 +399,7 @@ font-size: 1.3rem;
     box-shadow: 3px 5px 10px darkgray;
   } 
 
-  .me{
-    padding: 5vh 10vw;
-    gap: 5vh;
-    background: linear-gradient(168deg, #0891B2 30%, white 30%);
-   }
-
-  .main-img {
-    background-image: url(./images/me-cool-light-phone.jpg);
-    width: 100%;
-    aspect-ratio: 0.77/1;
-    transform: none;
-   }
-
-   .main-img p {
-    font-size: 2rem;
-    transform: translateY(100%);
-    color: dimgrey;
-   }
-   
-   .about-me {
-    display: flex;
-    flex-direction: column;
-    box-shadow: none;
-   }
-  
-   .about-me-title{
-    font-size: 2rem;
-    align-self: center;
-   }
-
-  .about-me .shape {
-    display: none;
-  }
-
-  .media {
-    align-self: center;
-    gap: 3vw;
-    transform: scale(1.2);
-  }
-
   .footer-info  .media {
     align-self: center;
   }
-
 }

@@ -1,5 +1,4 @@
 import './style.css';
-// import meCoolLight from './images/me-cool-light.jpg';
 import meSmiling from './images/me-smiling.jpg';
 import favicon from './images/favicon.ico';
 import openInNew from './images/open-in-new.svg';
@@ -11,7 +10,6 @@ import restaurantImg from './images/restaurant.png';
 import toDoListImg from './images/to-do-list.webp';
 import weatherImg from './images/weather.webp';
 import adminImg from './images/admin-dashboard.png';
-// import projects from './images/'
 
 const link = document.createElement('link');
 link.rel = 'icon';
@@ -51,9 +49,18 @@ weather.src = weatherImg;
 
 const adminDashboard = document.querySelector('#admin-dashboard > img');
 adminDashboard.src = adminImg;
-// const projectImg = document.querySelector('.project-img');
-// projectImg.src = ;
-// externalWindow.appendChild(img);
 
-// const imgElement = document.querySelector('.me-img');
-// imgElement.src = meCoolLight;
+function openTab(href) {
+  window.open(`${href}`, '_blank');
+}
+
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+  let element = project.querySelector('.external-window');
+  project.addEventListener('click', event => {
+    if (event.target.className === 'devicon-github-original') {
+      element = project.querySelector('.repo');
+    }
+    openTab(element.href);
+  });
+});
