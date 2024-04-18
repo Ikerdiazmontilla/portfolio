@@ -56,11 +56,10 @@ function openTab(href) {
 
 const projects = document.querySelectorAll('.project');
 projects.forEach(project => {
-  let element = project.querySelector('.external-window');
+  const element = project.querySelector('.external-window');
   project.addEventListener('click', event => {
-    if (event.target.className === 'devicon-github-original') {
-      element = project.querySelector('.repo');
+    if (!(event.target.className === 'devicon-github-original')) {
+      openTab(element.href);
     }
-    openTab(element.href);
   });
 });
