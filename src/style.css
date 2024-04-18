@@ -200,6 +200,45 @@ font-size: 1.3rem;
 
 
 @media (max-width: 1024px) {
+
+  .me{
+    padding: 0px 10vw;
+    padding-bottom: 5vh;
+    flex-direction: column;
+
+   }
+
+  .main-img {
+    min-height: 16vh;
+    min-width: 16vh;
+    transform: scale(2) translate( -53%, 38% );
+   }
+
+   .main-img p {
+    font-size: 1.5rem;
+   }
+   
+   .about-me {
+    display: block;
+   }
+  
+   .about-me-title{
+    font-size: 2rem;
+   }
+
+  .about-me .shape {
+    float: left;  
+    min-width: 36vw; 
+    min-height: 18vh;
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .media {
+    align-self: flex-end;
+    display: flex;
+    gap: 6px;
+   }
+
   .projects {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40px 1fr 1fr 1fr;
@@ -225,19 +264,10 @@ font-size: 1.3rem;
     box-shadow: 3px 5px 10px darkgray;
   } 
 
-  .me{
-    padding:0px 10vw;
-    padding-bottom: 5vh;
-    flex-direction: column;
-    /* align-items: start; */
-    /* position: relative; */
-   }
-  
-  
-   .main-img p {
-    /* transform: translate(120%); */
-    font-size: 1.5rem;
-   }
+      /* .me {
+    align-items: start;
+    position: relative;
+   } */
   
    /* .about-me{
     display: grid;
@@ -257,41 +287,100 @@ font-size: 1.3rem;
   overflow: visible;
   } */
 
-  .main-img {
-    min-height: 16vh;
-    min-width: 16vh;
-    
-    /* align-items: flex-start;
-    justify-content: flex-end; */
-    /* transform: translate( -15%, -35% ); */
-    transform: scale(2) translate( -53%, 38% );
-    /* visibility: hidden; */
-    /* position: absolute; */
+  /* .main-img {
+    visibility: hidden;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-end;
+    transform: translate( -15%, -35% );
+  } */
+
+  /* .main-img p {
+    transform: translate(120%);
+  } */
+
+  /* .about-me .shape{
+    min-width: 350px; 
+    min-height: 240px; 
+  } */
+  
+}
+
+
+@media (max-width: 767px) {
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project{
+    max-width: 80vw;
+  }
+
+
+  footer {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    gap: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  
+  .footer-info h2{
+    align-self: center;
+  }
+
+  .footer-img{
+    max-height: 70vh;
+    box-shadow: 3px 5px 10px darkgray;
+  } 
+
+  .me{
+    padding: 5vh 10vw;
+    gap: 5vh;
+    background: linear-gradient(168deg, #0891B2 30%, white 30%);
    }
+
+  .main-img {
+    background-image: url(./images/me-cool-light-phone.jpg);
+    width: 100%;
+    aspect-ratio: 0.77/1;
+    transform: none;
+   }
+
+   .main-img p {
+    font-size: 2rem;
+    transform: translateY(100%);
+    color: dimgrey;
+   }
+   
    .about-me {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
    }
   
    .about-me-title{
     font-size: 2rem;
-
+    align-self: center;
    }
 
   .about-me .shape {
-    float: left;  
-    min-width: 36vw; 
-    min-height: 18vh;
-    /* min-width: 350px; 
-    min-height: 240px;  */
-    
-    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: none;
   }
-  
-  
-   .media {
-    align-self: flex-end;
-    display: flex;
-    gap: 6px;
-   }
-  
+
+  .media {
+    align-self: center;
+    gap: 3vw;
+    transform: scale(1.2);
+  }
+
+  .footer-info  .media {
+    align-self: center;
+  }
+
 }
